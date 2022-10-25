@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="" content="">
+    <link rel="stylesheet" href="CSS/style.css">
+<script src="JS/app.js"></script>
+        
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="image/x-icon" href="IMG/favicon-16x16.png">
+        <title>Veterinaria y Lavadero canino</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            
+        </div>
+        <nav class="menu">
+            <ul class="menu"> 
+                <li><a href="1-index.html" target="_top">Inicio</a></li>
+                <li><a href="2-nosotros.html" target="_top">Nosotros</a></li> 
+                <li><a href="3-clifelices.html" target="_top">Clientes Felices</a></li>
+                <li><a href="5-contacto.html" target="_blank">Spa/Peluqueria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br>
+
+<form class="formulario" name="formulario" id="formulario" action="" method="" onsubmit="return validar( )">
+    <legend>DATOS PERSONALES</legend>
+    <br>
+        <fieldset>
+            <label for="nombre">Nombre: </label>
+            <input size="30" type="text" name="nombre" id="nombre"><!--requerido validacion-->
+            <br><br>
+            <label for="apellido">Apellido: </label>
+            <input size="30" type="text" name="apellido" id="apellido" value="">
+            <br><br>
+            <label for="telefono">Telefono: </label>
+            <input size="30" type="tel" name="telefono" id="telefono" value=""><!--requerido validacion-->
+            <br><br> 
+            <label for="correo">E-Mail: <E-Mail></E-Mail>: </label>
+            <input size="30" type="" name="email" id="email" value="">
+            <br><br>
+            <label for="notificaciones">Desea recibir notificaciones de ofertas y cuidados de mascotas?: </label>
+        <select>
+            <option value="1">Si </option>
+            <option value="2">No </option>
+        </select>
+        </fieldset>  
+<br>
+    <legend>ELIGA SU TURNO</legend>
+    <br>
+        <fieldset> 
+            <label for="motivo">Motivo: </label>
+            <select>
+                <option value="1">Veterinaria</option>
+                <option value="2">Lavadero</option>
+            </select>  
+    <br><br>
+            <label for="dia">DIA: </label>
+            <input size="40" type="date" name="date" id="date" value=""><!--requerido validacion-->
+        </fieldset>
+<br> 
+    <legend>DATOS DE LA MASCOTA</legend>
+    <br>
+        <fieldset>
+            <label for="nombre">Nombre: </label>
+            <input size="30" type="text" name="" id="" value="">
+            <br><br>
+            <label for="mascota">Seleccione su mascota: </label>
+        <select>
+            <option value="1">Perro </option>
+            <option value="2">Gato </option>
+            <option value="3">Ave </option>
+            <option value="4">Reptil </option>
+            <option value="5">Roedor </option>
+        </select>
+<br><br>
+    <label for="Otro">Comentario: </label>
+        <input size="30" type="text" name="" id="" value="">
+<br><br>
+        <input type="submit" class="btn" value="Enviar">
+        <input type="reset"  class="" value="Borrar">
+        </fieldset>
+</form>
+<div class="aside">
+    <aside class="api">
+        <h1>Adopta un gato</h1>
+            <img alt="gatitos aleatorios">
+    </aside>
+</div>
+<footer>
+    <div class="footer">
+        <div class="box-footer">
+            <h2>Estamos ubicados</h2>
+            <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6287.682613843623!2d-57.58373429177247!3d-38.004161846342264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1666374854793!5m2!1ses-419!2sar" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+     
+        <div class="box-footer">
+            <h2>redes sociales</h2>
+
+            <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a>
+        </div>
+    </div>
+</footer>
+<!--VALIDACION-->
+<script>
+    function validar() {
+        if (document.fvalida.nombre.value.length  == 0) {
+        alert("Tiene que escribir su nombre")
+        document.fvalida.nombre.focus()
+        return 0
+    }
+    if (document.fvalida.tetefono.value.length  == 0) {
+        alert("Tiene que escribir su telefono")
+        document.fvalida.telefono.focus()
+        return 0
+    }
+    if (document.fvalida.date.selectedIndex == 0) {
+        alert("Debe seleccionar un dia")
+        document.fvalida.date.focus()
+        return 0
+        }
+
+        alert("Muchas gracias por enviar el formulario")
+        document.fvalida.submit()
+    }
+</script>
+</body>
+</html>
